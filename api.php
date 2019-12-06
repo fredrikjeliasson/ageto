@@ -712,7 +712,7 @@ function sendCode($type, $repeat, $code)
 	system("/bin/stty -F /dev/ttyS0 $defaultBaudRate");
 
 	//Send string including variables
-	system("sudo echo \"Hello the value is: and also:\" > /dev/ttyS0");
+	echo system("echo \"hello\" > /dev/ttyS0 ");
 
     // Set device controle options (See man page for stty)
     exec("chmod 666 /dev/ttyS0");
