@@ -713,6 +713,7 @@ function sendCode($type, $repeat, $code)
 
 	//Send string including variables
 	echo system("echo \"R," . $repeat . "," . $code . "E\" > /dev/ttyS0 ");
+	echo "R," . $repeat . "," . $code . "E";
 
     // Set device controle options (See man page for stty)
     exec("chmod 666 /dev/ttyS0");
