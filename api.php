@@ -711,7 +711,7 @@ function sendCode($type, $repeat, $code)
     exec("/bin/stty -F /dev/ttyS1 $defaultBaudRate sane raw cs8 hupcl cread clocal -echo -onlcr ");
     
     // Open serial port
-    $fp = fopen("/dev/ttyS0", "c+");
+    $fp = fopen("/dev/ttyS1", "c+");
     if (!$fp) { 
 		echo "<script>alert(\"Något gick fel... Antagligen är porten låst... \\n\\nTesta att ändra rättigheterna!\"); </script>";
 		die();
