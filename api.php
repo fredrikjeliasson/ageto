@@ -709,10 +709,10 @@ function sendCode($type, $repeat, $code)
 
 
 	//Set baud rate
-	system("/bin/stty -F /dev/ttyS0 $defaultBaudRate");
+	system("/bin/stty -F /dev/ttyS0 $defaultBaudRate sane raw cs8 hupcl cread clocal -echo -onlcr");
 
 	//Send string including variables
-	echo system("echo \"hello\" > /dev/ttyS0 ");
+	echo system("echo \"R," . $repeat . "," . $code . "E\" > /dev/ttyS0 ");
 
     // Set device controle options (See man page for stty)
     exec("chmod 666 /dev/ttyS0");
