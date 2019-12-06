@@ -707,7 +707,6 @@ function sendCode($type, $repeat, $code)
 {
 	global $defaultBaudRate;
 
-
 	//Set baud rate
 	system("/bin/stty -F /dev/ttyS0 $defaultBaudRate sane raw cs8 hupcl cread clocal -echo -onlcr");
 
