@@ -706,6 +706,13 @@ function generateRFCode()
 function sendCode($type, $repeat, $code)
 {
 	global $defaultBaudRate;
+	
+	
+	//Set baud rate
+	system("stty -F /dev/ttyS0 57600");
+		
+	//Send string including variables
+	system("sudo echo \"Hello the value is: and also:\" > /dev/ttyS0");
     
     // Set device controle options (See man page for stty)
     exec("chmod 666 /dev/ttyS0");
