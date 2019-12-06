@@ -708,7 +708,7 @@ function sendCode($type, $repeat, $code)
 	global $defaultBaudRate;
     
     // Set device controle options (See man page for stty)
-    exec("/bin/stty -F /dev/ttyS0 $defaultBaudRate sane raw cs8 hupcl cread clocal -echo -onlcr ");
+    exec("/bin/stty -F /dev/ttyS1 $defaultBaudRate sane raw cs8 hupcl cread clocal -echo -onlcr ");
     
     // Open serial port
     $fp = fopen("/dev/ttyS0", "c+");
