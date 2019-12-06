@@ -1,0 +1,25 @@
+
+
+read -p "This will install apache and php for Armbian. Continue? (y/n)?" choice
+case "$choice" in 
+  y|Y ) 
+  echo "yes"; 
+  exec sudo apt-get update || true;
+  exec sudo apt-get dist-upgrade;
+  exec sudo apt-get install apache2;;
+  n|N ) echo "no";;
+  * ) echo "invalid";;
+esac
+sed -i 's/enable_post_data_reading = Off/enable_post_data_reading = On/' /etc/php/7.3/apache2/php.ini
+
+
+sed -i 's/short_open_tag = Off/short_open_tag = On/' /etc/php/7.3/apache2/php.ini
+
+sed -i 's/allow_url_include = Off/allow_url_include = On/' /etc/php/7.3/apache2/php.ini
+
+short_open_tag = Off
+allow_url_include = Off
+enable_post_data_reading = Off
+
+chmod 777 /dev/ttyS0
+I /etc/rc.local

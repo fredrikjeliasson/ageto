@@ -1,0 +1,22 @@
+Från Nov 2019, använd bara denna versionen!! 
+
+Saker att fixa:
+
+- Ny design
+- Guide för uppstart
+- Snygga till funktionerna i api.php
+ * länkarna (ex. kortare api-kod, snyggare namn, grupp
+ * FIXAD möjlighet att skicka id
+ * JSON?
+ * Ordna knappar på enheter (inställningar, API-länk etc)
+ * Byta namn på DIVar, och lägga till span och andra beteckningar för att snygga upp
+- Framställning av slumpmässig kod?
+- Ny Arduino-kod som kan ta emot 1/0.
+- Funktion för IR?!
+
+Länka till ikoner
+
+<div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<div>Icons made by <a href="https://www.flaticon.com/authors/pixel-buddha" title="Pixel Buddha">Pixel Buddha</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>

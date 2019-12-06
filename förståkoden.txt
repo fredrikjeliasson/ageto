@@ -1,0 +1,61 @@
+Bryt ner koden igen! 
+10110101101110101101110101101101110101101110101110101101101101110101110101110 1101 10 11 //Nya avkoden med annan
+10110101101110101101110101101101110101101110101110101101101101110101110101110 1101 01 11 01101101101 //Nya påkoden med annan Arduino och en enhetskod
+   
+																							 011011101011 //gammal enhetskod
+10110101101101101110110101110110101110110110101110101110101110101110110101110 1101101  //gammal gruppkod av, innan enhetskod
+10110101101101101110110101110110101110110110101110101110101110101110110101110 1101011 // gammal gruppkod på, innan enhetskod
+10110101101101101110110101110110101110110110101110101110101110101110110101110 10111010 11011011011011011011 // gammal HELA grupp av
+10110101101101101110110101110110101110110110101110101110101110101110110101110 10110110 11011011011011011011"); // gammal HELA grupp på
+<standard?><----------Gruppkod-----------------------------------------------> <på/av-> <enhetskod/alla av->
+	  
+	  Testa att göra om till 1/2/3 tänk på att arduinon skickar ut en 1 i början. Så den första ettan är en 2!
+	  Ersätt 0111>3, 011>2, 01>1 i den ordningen
+	  
+	   12123123122312313122231313 222 //Nya avkoden med annan Arduino och en enhetskod
+	   12123123122312313122231313 213 2221 //Nya påkoden med annan Arduino och en enhetskod
+   
+									  2312 //gammal enhetskod
+	   12122232132132213131313213 221 //gammal gruppkod av, innan enhetskod
+	   12122232132132213131313213 212 // gammal gruppkod på, innan enhetskod
+	   12122232132132213131313213 131 2222222 // gammal HELA grupp av
+	   12122232132132213131313213 122 2222222"); // gammal HELA grupp på
+										 <----De fyra sista verkar inte spela någon roll vilket värde De har, och De tre sista kan tas bort helt
+	  
+	  
+	  Funkar för alla på
+	  122
+	  123
+	  
+	  Alla av
+	  132
+	  131
+	  
+	  Första siffran
+	  1=Alla (men varför behövs då fortsättningen?)
+	  2=Enhet 
+	  3=*Fungerar ej/används ej
+	  Andra siffran
+	  Om första = 1
+	  1=På
+	  2=Av
+	  3=*
+	  Om = 2
+	  1=*
+	  2=På
+	  3=Av
+	  Tredje siffran = okänt
+	  
+	  Enligt hemsida: OBS! Då kan man göra så att när 1 skickas till ard. så gör den en kort hög, följt av en kort låg och 0 blir kort hög, lång låg
+
+	  10=1
+	  01=0
+	  
+101001011001011001010110010110011001010101100110011010101 //Nya avkoden med annan
+1010010110010110010101100101100110010101011001100110100110101010 //Nya påkoden med annan Arduino och en enhetskod
+   
+																							 01011001 //gammal enhetskod
+101001010101101001101001101010011001 10 01 10 01 10 10 01 10 10 10  //gammal gruppkod av, innan enhetskod
+1010010101011010011010011010100110011001100110 10 01 10 10 01 // gammal gruppkod på, innan enhetskod
+101001010101101001101001101010011001100110011010 01 10 01 10 01 01 0101010101 // gammal HELA grupp av
+101001010101101001101001101010011001100110011010 01 10 01 01 01 01 0101010101"); // gammal HELA grupp på
