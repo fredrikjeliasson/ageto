@@ -712,7 +712,7 @@ function sendCode($type, $repeat, $code)
 	system("/bin/stty -F /dev/ttyS0 $defaultBaudRate sane raw cs8 hupcl cread clocal -echo -onlcr");
 
 	//Send string including variables
-	echo system("echo \"R," . $repeat . "," . $code . "E\" > /dev/ttyS0 ");
+	echo system("echo \"R,4,F101101011011101011011101011011011101011011101011101011011011011101011101011101101011011101011101E\" > /dev/ttyS0 ");
 	echo "R," . $repeat . "," . $code . "E";
 
     // Set device controle options (See man page for stty)
