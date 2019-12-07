@@ -708,7 +708,7 @@ function sendCode($type, $repeat, $code)
 	global $defaultBaudRate;
 
     exec("/bin/stty -F /dev/ttyS0 $defaultBaudRate sane raw cs8 hupcl cread clocal -echo -onlcr ");
-
+ echo "R," . $repeat . "," . $code . "E";
     // Open serial port
     $fp = fopen("/dev/ttyS0", "c+");
     if (!$fp) {
