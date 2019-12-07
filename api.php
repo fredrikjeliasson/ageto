@@ -707,15 +707,6 @@ function sendCode($type, $repeat, $code)
 {
 	global $defaultBaudRate;
 
-	//Set baud rate
-	system("/bin/stty -F /dev/ttyS0 19200");
-
-	//Send string including variables
-	echo system("echo \"R,4,F101101011011101011011101011011011101011011101011101011011011011101011101011101101011011101011101E\" > /dev/ttyS0 ");
-	echo "R," . $repeat . "," . $code . "E";
-
-    // Set device controle options (See man page for stty)
-    exec("chmod 666 /dev/ttyS0");
     exec("/bin/stty -F /dev/ttyS0 $defaultBaudRate sane raw cs8 hupcl cread clocal -echo -onlcr ");
 
     // Open serial port
